@@ -1,0 +1,421 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.done-task {
+  text-decoration: line-through;
+  background-color: rgba(170, 169, 169, 0.7);
+}
+
+.undone-task {
+  background-color: white;
+  text-decoration: none;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #267dff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header a {
+  color: #eeecec;
+  font-size: 30px;
+  font-family: "helvetica";
+  text-decoration: none;
+  margin: 3px 20px;
+}
+
+header i {
+  font-size: 50px;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+aside nav ul {
+  list-style-type: none;
+}
+
+aside nav ul li a {
+  color: silver;
+  font-size: 40px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+aside nav ul li a:hover {
+  color: #eeecec;
+  background-color: none;
+  text-decoration: none;
+  text-shadow: 0 0 2px white;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  height: 100%;
+}
+
+main .hero {
+  padding: 20px 5px 5px 5px;
+  text-align: center;
+  background-color: #267dff;
+}
+
+main .hero p {
+  color: #eeecec;
+  font-size: 20px;
+  font-family: "times new roman";
+  text-decoration: none;
+}
+
+main .button-containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 150px;
+  border: 1px solid transparent;
+}
+
+main .button-containers .list-container, main .button-containers .tutorial-container {
+  width: 50%;
+  text-align: center;
+  border: 2px solid transparent;
+  height: auto;
+}
+
+main .button-containers .list-container i, main .button-containers .tutorial-container i {
+  color: #267dff;
+  font-size: 40px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+main .button-containers .list-container i:hover, main .button-containers .tutorial-container i:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+main .button-containers .list-container p, main .button-containers .tutorial-container p {
+  margin: 20px auto;
+  width: 50%;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+main .button-containers .list-container a, main .button-containers .tutorial-container a {
+  text-align: center;
+  background-color: #267dff;
+  color: #eeecec;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Helvetica, sans-serif;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 15px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+main .button-containers .list-container a:hover, main .button-containers .tutorial-container a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+main .button-containers .list-container a:active, main .button-containers .tutorial-container a:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+main .current-lists .finished-container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+main .current-lists .finished-container .finished-list {
+  margin-top: 30px;
+}
+
+main .current-lists .finished-container .finished-list .list-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .current-lists .finished-container .finished-list .list-buttons button {
+  margin-top: 40px;
+  text-align: center;
+  background-color: #267dff;
+  color: #eeecec;
+  padding: 8px;
+  text-decoration: none;
+  border: 2px solid #267dff;
+  font-size: 20px;
+}
+
+main .current-lists .finished-container .finished-list .list-buttons button:hover {
+  color: #267dff;
+  background-color: #eeecec;
+  text-decoration: none;
+  border: 2px solid #267dff;
+}
+
+main .current-lists .finished-container .finished-list .list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #267dff;
+}
+
+main .current-lists .finished-container .finished-list .list-header h3 {
+  width: 40%;
+  margin: 5px;
+  padding: 5px;
+  color: #eeecec;
+  font-size: 20px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+main .current-lists .finished-container .finished-list .list-header .date-info {
+  margin: 5px;
+  margin-right: 10px;
+  color: #eeecec;
+  font-size: 20px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+main .current-lists .finished-container .finished-list .tasks {
+  width: 100%;
+}
+
+main .current-lists .finished-container .finished-list .tasks .item-text {
+  font-family: 'helvetica';
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+}
+
+main .current-lists .finished-container .finished-list .tasks .item-text:hover {
+  background-color: rgba(170, 169, 169, 0.7);
+}
+
+main .current-lists h2 {
+  text-align: center;
+  color: #267dff;
+  font-size: 25px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+main .new-list {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 70%;
+}
+
+main .new-list .form-buttons {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .new-list .form-buttons button {
+  text-align: center;
+  background-color: #267dff;
+  color: #eeecec;
+  padding: 8px;
+  text-decoration: none;
+  border: 2px solid #267dff;
+  font-size: 20px;
+}
+
+main .new-list .form-buttons button:hover {
+  color: #267dff;
+  background-color: #eeecec;
+  text-decoration: none;
+  border: 2px solid #267dff;
+}
+
+main .new-list form .form-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #267dff;
+}
+
+main .new-list form .form-header #title {
+  font-size: 20px;
+  width: 40%;
+  margin: 5px;
+  padding: 5px;
+}
+
+main .new-list form .form-header .date-info {
+  margin: 5px;
+  margin-right: 10px;
+  color: #eeecec;
+  font-size: 20px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+
+main .new-list form .add-items .item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .new-list form .add-items .item .new-task {
+  width: 95%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+main .new-list form .add-items .item .x {
+  width: 5%;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  border-left: none;
+}
+
+main .new-list form .add-items .item .x:hover {
+  background-color: red;
+}
+
+main #newbtn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  background-color: #267dff;
+  color: #eeecec;
+  padding: 8px;
+  text-decoration: none;
+  border: 2px solid #267dff;
+  font-size: 30px;
+}
+
+main #newbtn:hover {
+  color: #267dff;
+  background-color: #eeecec;
+  text-decoration: none;
+  border: 2px solid #267dff;
+}
+
+footer {
+  background-color: #267dff;
+  text-align: center;
+  color: #eeecec;
+  font-size: 15px;
+  font-family: "helvetica";
+  text-decoration: none;
+}
+/*# sourceMappingURL=sass.css.map */

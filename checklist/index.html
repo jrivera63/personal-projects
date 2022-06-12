@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7bbe8a86d4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/sass.css">
+    <title>To-Do</title>
+</head>
+<body>
+    <header>
+        <a href="#" id="menu" onclick="openMenu()"><i class="fas fa-solid fa-bars"></i></a>
+        <a href="#"><h1>Josiah's To-Do List</h1></a>
+    </header>
+    <aside id="overlay-menu" onclick="closeMenu()">
+        <div class="aside-content">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages/lists.html">Create Lists</a></li>
+                    <li><a href="pages/tutorial.html">Tutorial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <div class="hero">
+            <p>A to-do list project created by Josiah Rivera. The goal of this project is to create a useful To-Do list using HTML, CSS, and Javascript. The design goal is to use smooth animation and interactive elements on the page.</p>
+        </div>
+        <div class="button-containers">
+            <div class="list-container">
+                <i class="fas fa-solid fa-check"></i>
+                <p>Create and use lists to help keep track of tasks. Give helpful titles to help organize lists.</p>
+                <a href="pages/lists.html">Go to lists page</a>
+            </div>
+            <div class="tutorial-container">
+                <i class="fas fa-solid fa-question"></i>
+                <p>View the tutorial on how to fully maximize the functions on this website.</p>
+                <a href="pages/tutorial.html">Go to tutorials page</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <strong>&copy; Josiah Rivera 2022</strong>
+    </footer>
+    <script src="scripts/javascript.js"></script>
+</body>
+</html>

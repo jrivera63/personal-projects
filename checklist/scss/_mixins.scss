@@ -1,0 +1,33 @@
+
+//
+// CUSTOM MIXINS USED FOR A SMALL FRAMEWORK
+// REFERENCE MIXINS USING @INCLUDE MIXIN NAME
+// PROP STANDS FOR PROPERTIES
+//
+
+@mixin flex-prop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text-prop($color, $fontS, $fontF, $style){
+    color: $color;
+    font-size: $fontS;
+    font-family: $fontF;
+    text-decoration: $style;
+}
+
+@mixin hover-prop($color, $back, $style){
+    color: $color;
+    background-color: $back;
+    text-decoration: $style;
+}
+
+@mixin button-prop($back-color, $text-color, $padding, $style){
+    text-align: center;
+    background-color: $back-color;
+    color: $text-color;
+    padding: $padding;
+    text-decoration: $style;
+}

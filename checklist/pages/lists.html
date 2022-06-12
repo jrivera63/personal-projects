@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7bbe8a86d4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/sass.css">
+    <title>To-Do</title>
+</head>
+<body>
+    <header>
+        <a href="#" id="menu"><i class="fas fa-solid fa-bars"></i></a>
+        <a href="#"><h1>Josiah's To-Do List</h1></a>
+    </header>
+    <aside id="overlay-menu">
+        <div class="aside-content">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Create Lists</a></li>
+                    <li><a href="tutorial.html">Tutorial</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <main>
+       <div class="current-lists">
+           <h2>Current Lists</h2>
+           <div class="finished-container">
+               <!-- <span class="item-text">Go to the store</span> -->
+               <!-- <div class="finished-list">
+                   <div class="list-header">
+                        <h3 class="finished-title">Title</h3>
+                        <span class="date-info">Monday</span>
+                   </div>
+                   <div class="tasks">
+                        <span class="item-text">Go to the store</span>
+                   </div>
+                   <div class="list-buttons">
+                    
+                   </div>
+               </div> -->
+           </div>
+       </div>
+       <div class="new-list" id="new-list">
+           <form>
+                <div class="form-header">
+                    <input type="text" name="title" id="title" placeholder="Title">
+                    <span class="date-info"></span>
+                </div>
+                <div class="add-items" id="add-items">
+                    <!-- <div class="item">
+                        <input type="text" name="new-task" id="new-task" class="new-task">
+                        <div class="x" onclick="removeTask(this)">&times;</div>
+                    </div> -->
+                </div>
+            </form>
+           <div class="form-buttons">
+            <button id="addTask">Add Task</button>
+            <button id="finish">Finish</button>
+            <button id="cancel">Cancel</button>
+           </div>
+       </div>
+       <button id="newbtn">Create New To-Do List</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="../scripts/javascript.js"></script>
+</body>
+</html>

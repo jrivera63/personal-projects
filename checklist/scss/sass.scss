@@ -1,0 +1,267 @@
+@import 'cssreset';
+@import 'mixins';
+
+$blue: rgb(38, 125, 255);
+$white: rgb(238, 236, 236);
+$dark-white: rgb(192, 192, 192);
+$hover-gray: rgba(170, 169, 169, .7);
+
+.done-task{
+    text-decoration: line-through;
+    background-color: rgba(170, 169, 169, .7);
+}
+
+.undone-task{
+    background-color: white;
+    text-decoration: none;
+}
+
+header{
+    @include flex-prop;
+    background-color: $blue;
+    justify-content: space-between;
+    a{
+        @include text-prop($white, 30px, 'helvetica', none);
+        margin: 3px 20px;
+    }
+
+    i{
+        font-size: 50px;
+        
+    }
+}
+
+aside{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 1;
+    @include flex-prop;
+    display: none;
+    nav{
+        ul{
+            list-style-type: none;
+            li{
+                a{
+                    @include text-prop($dark-white, 40px, 'helvetica', none);
+                    &:hover{
+                        @include hover-prop($white, none, none);
+                        text-shadow: 0 0 2px white;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+main{
+    height: 100%;
+    // INDEX PAGE
+    ////////////////////
+    .hero{
+        padding: 20px 5px 5px 5px;
+        text-align: center;
+        background-color: $blue;
+        p{
+            @include text-prop($white, 20px, 'times new roman', none);
+        }
+    }
+    .button-containers{
+        @include flex-prop;
+        flex-direction: row;
+        margin-top: 150px;
+        border: 1px solid transparent;
+        .list-container, .tutorial-container{
+            width: 50%;
+            text-align: center;
+            border: 2px solid transparent;
+            height: auto;
+            i{
+                color: $blue;
+                font-size: 40px;
+                transition-duration: 1s;
+                &:hover{
+                    transform: scale(1.4);
+                }
+            }
+            p{
+                margin: 20px auto;
+                width: 50%;
+                text-align: center;
+                @include text-prop(black, 30px, 'helvetica', none);
+            }
+            a{
+                @include button-prop($blue, $white, 15px, none);
+                font-size: 25px;
+                font-family:  Helvetica, sans-serif;
+                border-radius: 8px;
+                display: inline-block;
+                margin-top: 15px;
+                transition-duration: .5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:active{
+                    transform: scale(.9);
+                }
+            }
+        }
+    }
+    ////LIST PAGE
+    .current-lists{
+        .finished-container{
+            margin: 0 auto;
+            width: 70%;
+            .finished-list{
+                margin-top: 30px;
+                .list-buttons{
+                    @include flex-prop;
+
+                    button{
+                        margin-top: 40px;
+                        @include button-prop($blue, $white, 8px, none);
+                        border: 2px solid $blue;
+                        font-size: 20px;
+                        &:hover{
+                        @include hover-prop($blue, $white, none);
+                        border: 2px solid $blue;
+                    }
+            }
+                }
+                .list-header{
+                    @include flex-prop;
+                    justify-content: space-between;
+                    background-color: $blue;
+                    h3{
+                        width: 40%;
+                        margin: 5px;
+                        padding: 5px;
+                        @include text-prop($white, 20px, 'helvetica', none);
+                    }
+                    .date-info{
+                        margin: 5px;
+                        margin-right: 10px;
+                        @include text-prop($white, 20px, 'helvetica', none);
+                    }
+                }
+                .tasks{
+                    width: 100%;
+                    .item-text{
+                        font-family: 'helvetica';
+                        text-align: center;
+                        display: block;
+                        cursor: pointer;
+                        width: 100%;
+                        padding: 5px;
+                        font-size: 20px;
+                        &:hover{
+                            background-color: $hover-gray;
+                        }
+                    }
+                }
+            }
+        }
+        h2{
+            text-align: center;
+            @include text-prop($blue, 25px, 'helvetica', none);
+        }
+    }
+
+    .new-list{
+        display: none;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 70%;
+        .form-buttons{
+            margin-top: 20px;
+            @include flex-prop;
+            justify-content: space-evenly;
+            button{
+                @include button-prop($blue, $white, 8px, none);
+                border: 2px solid $blue;
+                font-size: 20px;
+                &:hover{
+                    @include hover-prop($blue, $white, none);
+                    border: 2px solid $blue;
+                }
+            }
+        }
+        form{
+            
+            .form-header{
+                @include flex-prop;
+                justify-content: space-between;
+                background-color: $blue;
+                #title{
+                    font-size: 20px;
+                    width: 40%;
+                    margin: 5px;
+                    padding: 5px;
+                }
+                .date-info{
+                    margin: 5px;
+                    margin-right: 10px;
+                    @include text-prop($white, 20px, 'helvetica', none);
+                }
+            }
+            .add-items{
+                .item{
+                    width: 100%;
+                    @include flex-prop;
+                    justify-content: space-around;
+                    .new-task{
+                        width: 95%;
+                        padding: 10px;
+                        font-size: 20px;
+                        border: 1px solid black;
+                    }
+                    .x{
+                        width: 5%;
+                        cursor: pointer;
+                        font-size: 20px;
+                        padding: 10px;
+                        border: 1px solid black;
+                        border-left: none;
+                        &:hover{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    #newbtn{
+        display: block;
+        margin: 0 auto;
+        margin-top: 100px;
+        @include button-prop($blue, $white, 8px, none);
+        border: 2px solid $blue;
+        font-size: 30px;
+        &:hover{
+            @include hover-prop($blue, $white, none);
+            border: 2px solid $blue;
+        }
+    }
+}
+
+footer{
+    background-color: $blue;
+    text-align: center;
+    @include text-prop($white, 15px, 'helvetica', none);
+}
