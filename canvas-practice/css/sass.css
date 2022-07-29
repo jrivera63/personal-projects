@@ -1,0 +1,65 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+main canvas {
+  width: 700px;
+  height: 400px;
+  display: block;
+  border: 2px solid black;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+main .score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+main .score #semic {
+  font-size: 75px;
+  margin: 0 100px;
+}
+
+main .score .score1, main .score .score2 {
+  font-size: 70px;
+}
+
+main #reset {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 8px;
+  border: 2px solid green;
+  color: white;
+  background-color: green;
+  font-size: 20px;
+  border-radius: 15%;
+}
+
+main #reset:hover {
+  background-color: white;
+  color: green;
+}
+/*# sourceMappingURL=sass.css.map */

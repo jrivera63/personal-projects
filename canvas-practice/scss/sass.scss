@@ -1,0 +1,46 @@
+@import 'cssreset';
+@import 'mixins';
+
+body{
+    overflow-y:hidden;
+}
+
+main{
+    canvas{
+        width: 700px;
+        height: 400px;
+        display: block;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .score{
+        @include flex-prop;
+        margin: 0 auto;
+        margin-top: 30px;
+        text-align: center;
+        #semic{
+            font-size: 75px;
+            margin: 0 100px;
+        }
+        .score1, .score2{
+            font-size: 70px;
+        }
+    }
+    #reset{
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 8px;
+            border: 2px solid green;
+            color: white;
+            background-color: green;
+            font-size: 20px;
+            border-radius: 15%;
+            &:hover{
+                background-color: white;
+                color: green;
+            }
+        }
+}
